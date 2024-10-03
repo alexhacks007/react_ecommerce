@@ -1,0 +1,35 @@
+.active{
+    color: aqua;
+}
+.collapse{
+    display: flex;
+    justify-content: flex-end
+}  
+ul a {
+    text-decoration: none;
+    color: black; 
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin-inline: 10px;/* Default link color */
+  }
+
+ul  .nav-item{
+  align-items: center;
+  display: flex;
+}
+
+a.dropdown-item{
+  text-align: center;
+}
+.profilebtn:hover{
+  background-color: #4e4c4ccb;
+}
+
+@media only screen and (max-width: 768px){
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

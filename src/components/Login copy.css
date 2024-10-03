@@ -1,0 +1,25 @@
+.conatiner{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+.donlog{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-feminine-cosmetics-seamless-pattern-picture-image_986080.jpg");
+}
+/* button{
+  margin-top: 20px;
+  border-radius: 10px;
+} */

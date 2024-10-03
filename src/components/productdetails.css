@@ -1,0 +1,63 @@
+.cards{
+    /*  background-color: aquamarine; */
+    display: flex;
+}
+img{
+    width: 90%;
+}
+.child{
+ width: 50%;   
+}
+.content{
+    width: 50%;   
+   }
+.off{
+    text-decoration:line-through;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: rgba(70, 70, 70, 0.482);
+}
+.delvi{
+    text-align: left;
+}
+.off1{
+    color: green;
+}
+.offer{
+    display: flex;
+    width: 100%;
+    
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    height: 45px;
+    width: 45%;
+    border-color: rgba(5, 5, 5, 0.396);
+    border: 2px sollid rgba(234, 73, 73, 0.42);
+    border-radius: 5px;
+    background-color:#ff9f00;
+}
+.button1{
+    height: 45px;
+    width: 45%;
+    border-color: rgba(5, 5, 5, 0.396);
+    border: 2px sollid rgba(234, 73, 73, 0.42);
+    border-radius: 5px;
+    background-color:#fb641b;
+}
+.button:hover{
+    box-shadow: 0px 1px 19px 1px #bcbcbc;
+    width: 47%;
+}
+.button1:hover{
+    box-shadow: 0px 1px 19px 1px #b9b9b9;
+    width: 47%;
+}
+.butt{
+    display: flex;
+    column-gap: 20px;
+}
