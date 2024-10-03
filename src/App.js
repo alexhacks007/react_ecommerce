@@ -2,7 +2,7 @@ import './App.css';
 import { Navbar } from './components/Navbar';
 import { Counter } from './components/Counter';
 import { Products } from './components/Products';
-import { BrowserRouter , Routes , Route} from 'react-router-dom';
+import { HashRouter, Routes , Route} from 'react-router-dom';
 import { Home } from './components/Home';
 import ProductDetail from './components/Productdetails';
 // import Login from './components/Login_new';
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
     
-    <BrowserRouter>
+    <HashRouter>
     <AuthProvider>
     <Navbar/>
       <Routes>
@@ -32,7 +32,7 @@ function App() {
         <Route path="/cart" element={<Cart/>} />
       </Routes>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
       
     </>
 
