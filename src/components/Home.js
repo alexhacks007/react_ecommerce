@@ -1,15 +1,8 @@
 import './Home.css'
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import axios from 'axios';
-import { useState , useEffect } from "react";
 
 export function Home() {
-  const [products ,setProduct] = useState([]);
-    useEffect(() =>{
-      axios.get('https://dummyjson.com/products')
-  .then(res  => setProduct(res.data.products));
-  },[]);
   return (
     <>
       <Carousel interval={3000} controls={true} indicators={true} style={{ display: 'grid' }}>
@@ -92,87 +85,6 @@ export function Home() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>
-      <div>
-        <h1>Our special products</h1>
-        <div className='special'>
-        {/* <!-- Carousel wrapper --> */}
-<div
-  id="carouselMultiItemExample"
-  data-mdb-carousel-init class="carousel slide carousel-dark text-center"
-  data-mdb-ride="carousel"
->
-  {/* <!-- Controls --> */}
-  {/* <!-- Inner --> */}
-  <div class="carousel-inner py-4">
-    <div class="carousel-item active">
-      <div class="container">
-        <div class="row">
-        {products.map((product) => (
-          <div class="col-lg-4" id='1'>
-            <div class="card">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
-                class="card-img-top"
-                alt="Waterfall"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{product.title}</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-                </p>
-                <a href="#!" data-mdb-ripple-init class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-      ))}
-       {products.map((product) => (
-          <div class="col-lg-4 d-none d-lg-block" id='2'>
-            <div class="card">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-                </p>
-                <a href="#!" data-mdb-ripple-init class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-          ))}
-{products.map((product) => (
-          <div class="col-lg-4 d-none d-lg-block" id='3'>
-            <div class="card">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp"
-                class="card-img-top"
-                alt="Sunset over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-                </p>
-                <a href="#!" data-mdb-ripple-init class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-         ))}
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-        </div>
       </div>
     </>
   )
