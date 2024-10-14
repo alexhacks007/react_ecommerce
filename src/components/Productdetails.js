@@ -15,11 +15,10 @@ export function Productdetails(){
     const { id } = useParams();
     const [quantity , setQuantity] = useState(0);
     const navigate = useNavigate();
-    const [view,setview] = useState('')
     useEffect(() =>{
       console.log("THIS CALL HAPPEN")
   axios.get(`https://dummyjson.com/products/${id}`)
-  .then(res  => setProduct(res.data))},[]);
+  .then(res  => setProduct(res.data))},[id]);
   console.log(product)
     const [cart,setcart] = useState("ADD CART")
     const [cart1,setcart1] = useState([])
@@ -63,13 +62,6 @@ export function Productdetails(){
       .then(res=>setcart1(res));
   }
   console.log("product_details",cart1)
-  useEffect(() =>{
-    console.log("THIS CALL HAPPEN")
-axios.get(`https://dummyjson.com/carts/${id}`)
-.then(res  => setview(res.data))},[]);
-    function viewpro(){
-    console.log("total bill:",view)
-    }
     return(
         <>
              <ToastContainer/>
@@ -84,9 +76,8 @@ axios.get(`https://dummyjson.com/carts/${id}`)
             <h5 style={{color:'red',paddingTop:'10px'}}>{product.availabilityStatus}</h5>
             <div className='butt' style={{"textAlign":"center","padding":"20px"}}>
               <button type="button" className="button" id="button" onClick={addToCart}>{cart}</button>
-              <button type="button" className="button1" id="button">BUY NOW</button>
+              <div className='button2'><button onClick={()=>setQuantity(quantity+1)}>+</button>{quantity}<button onClick={()=>setQuantity(quantity-1)}>-</button></div>
               </div>
-              <div><button onClick={()=>setQuantity(quantity+1)}>+</button>{quantity}<button onClick={()=>setQuantity(quantity-1)}>-</button></div>
             <div className='discount' style={
               {
               width:'90%',
@@ -133,7 +124,6 @@ axios.get(`https://dummyjson.com/carts/${id}`)
                   </tr>
 
                 </table></div>
-                <div><button onClick={viewpro} >click to view</button></div>
               </div>
           </div>
           </div> : <h1>Loading...</h1>    

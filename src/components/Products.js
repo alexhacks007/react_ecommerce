@@ -12,7 +12,7 @@ export function Products(){
 
     return (
         <div>
-        <p>All Products</p>
+        <h1 className="producthometitle">Our Products</h1>
         <div className="contain mx-auto">
           {products.map((product) => (
             

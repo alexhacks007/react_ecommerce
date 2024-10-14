@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useAuth } from '../auth/Authenticate';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 function Modal1() {
   const { user,logoutUpdate} = useAuth();
@@ -25,16 +25,18 @@ function Modal1() {
           {
             user ?
           <><h5>First name: {user.firstName}</h5><h5>Last name: {user.lastName}</h5><h5>gender: {user.gender}</h5><h5>email: {user.email}</h5></> :
-          <><Button onClick={()=>{navigate('/login')}}>Login</Button></>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}><Button onClick={()=>{navigate('login')}}><Link onClick={handleClose} to='/login' style={{color:'white',textDecoration:'none'}}>Login</Link></Button></div>
 }
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
+          {user ?
           <Button variant="primary" onClick={logoutUpdate}>
             Logout
-          </Button>
+          </Button> :<span></span>
+}
         </Modal.Footer>
       </Modal>
     </>

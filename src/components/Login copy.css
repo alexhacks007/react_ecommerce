@@ -17,7 +17,20 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-feminine-cosmetics-seamless-pattern-picture-image_986080.jpg");
+  background-color: azure;
+  width:100%;
+}
+.registervisibilty{
+  width : 100%;
+  margin: 10%;
+}
+@media only screen and (max-width: 768px){
+  .conatiner{
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    border-radius: 0;
+  }
 }
 /* button{
   margin-top: 20px;

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { useAuth } from '../auth/Authenticate';
+import Register from './Register';
 
 const Login1 = () => {
     const { user,loginUpdate } = useAuth();
@@ -41,8 +42,8 @@ const Login1 = () => {
   return (
     <div className='donlog'>
        <ToastContainer/>
-      <form onSubmit={onFormSubmit} className='conatiner'>
-      <label><h1>LOGIN PAGE</h1></label>
+      {/* <form onSubmit={onFormSubmit} className='conatiner'>
+      <label><h1><img src='' alt='loading'></img></h1></label>
         <div>
           <label for='email'>Email:</label><br/>
           <input type="text"
@@ -63,7 +64,8 @@ const Login1 = () => {
         <div style={{textAlign:'center'}}>
           <button type='submit' style={{backgroundColor:'#51e6798f',borderRadius:'5px',border:'2px solid 1px solid white'}}>submit</button>
         </div>
-      </form>
+      </form> */}
+      <div className="registervisibilty"><Register/></div>
     </div>
   )
 }

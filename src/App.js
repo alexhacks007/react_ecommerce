@@ -1,6 +1,5 @@
 import './App.css';
 import { Navbar } from './components/Navbar';
-import { Counter } from './components/Counter';
 import { Products } from './components/Products';
 import { BrowserRouter , Routes , Route} from 'react-router-dom';
 import { Home } from './components/Home';
@@ -12,6 +11,8 @@ import Login1 from './components/Login1';
 import Cart from './components/Cart.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Footer from './components/Footer.js';
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -24,13 +25,15 @@ function App() {
     <AuthProvider>
     <Navbar/>
       <Routes>
-        <Route path=''  element = {<Home/>}/>
-        <Route path='products' element = { <Products/>}/>
-        <Route path="/product/:id" element={<ProductDetail/>}/>
-        <Route path='counter' element = { <Counter/>}/>
-        <Route path='login' element = { <Login1/>}/>
-        <Route path="/cart" element={<Cart/>} />
+            <Route index element={<Home />} />
+            <Route path="products" element={<Products />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="login" element={<Login1 />} />
+            <Route path="/cart" element={<Cart />} />
+            {/* Redirect any unknown path to the home page */}
+            <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer/>
       </AuthProvider>
     </BrowserRouter>
       

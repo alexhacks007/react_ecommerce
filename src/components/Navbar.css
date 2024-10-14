@@ -1,19 +1,37 @@
-.active{
-    color: aqua;
+.navbar-nav .active i{
+  color: rgb(255 255 255);
 }
-.collapse{
+.navbar-icon{
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    margin-right:1%;
 }  
+.navbar{
+  background-color: #B7E0FF;
+  flex-wrap: nowrap;
+  /* background: #40E0D0;
+  background: -webkit-linear-gradient(to right, #ff0099, #40E0D0);
+  background: linear-gradient(to right, #FF0080, #40E0D0); */
+}
+
 ul a {
     text-decoration: none;
-    color: black; 
     display: flex;
     align-items: center;
     height: fit-content;
     margin-inline: 10px;/* Default link color */
   }
-
+.navbar-nav{
+  flex-direction: row;
+  color: #111; 
+  justify-content: space-evenly;
+}
+.navbar-nav i{
+  color: #111;
+}
+.navright{
+  margin-right: 1%;
+}
 ul  .nav-item{
   align-items: center;
   display: flex;
@@ -25,11 +43,111 @@ a.dropdown-item{
 .profilebtn:hover{
   background-color: #4e4c4ccb;
 }
+.username{
+  margin: 0;
+}
+/* Sidebar styles */
+.sidebar {
+  height: 100%; /* Full height */
+  width: 0; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black background */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  padding-top: 60px;
+  margin-right: 20%; /* Place content 60px from the top */
+}
 
+.sidebar.open {
+  width: 250px; /* Show the sidebar */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: #f1f1f1;
+}
+
+/* Close button style */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Ensure the content shifts when the sidebar is open */
+body {
+  transition: margin-left .5s;
+  padding: 0;
+}
+
+.dropdown-menu li .dropdown-item{
+  color:#111;
+  font-size: 100%;
+  margin: 0;
+}
+.dropdown .dropdown-toggle{
+  padding: 0;
+  text-align: start;
+  transition-duration: 0.7s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.dropdown-menu .dropdown-item a{
+  color: #111;
+  font-size: 100%;
+}
+.dropdown-menu{
+  width: 90%;
+  transition-duration: 0.2s;
+}
+.navbar-collapse {
+  width: 40%;
+
+}
+.search .input-group{
+  width: 80%;
+}
+.bi-person-circle{
+  margin-right:4% ;
+}
 @media only screen and (max-width: 768px){
-  .navbar{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  .search{
+    visibility: hidden;
+    position:absolute;
+    right:100%;
+  }
+  .navbar-nav{
+    visibility: hidden;
+    position:absolute;
+    right:100%;
+  }
+  .dropdown .dropdown-toggle{
+    column-gap: 8%;
   }
 }

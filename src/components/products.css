@@ -1,12 +1,12 @@
 .divs{
     border: 1px solid rgba(0, 0, 0, 0.25);
     margin: 10px;
-    width: 20%;
+    width: 18rem;
     padding: 10px;
     font-size: small;
     border-radius: 12px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.34);
+    background-color:#ffffff;
     
 }
 .divs:hover{
@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    background-color: rgba(220, 220, 220, 0.30);
+    background-color:aliceblue;
 }
 .link{
     color: black;
